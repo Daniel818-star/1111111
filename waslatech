@@ -46,11 +46,11 @@
 
         /* Premium Glassmorphism */
         .glass {
-            background: var(--bg-card);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--border);
-        }
+    background: var(--bg-card);
+    -webkit-backdrop-filter: blur(12px); /* Vendor prefix comes first */
+    backdrop-filter: blur(12px);         /* Standard property comes last */
+    border: 1px solid var(--border);
+}
 
         .glass-hover:hover {
             border-color: var(--accent);
@@ -137,6 +137,13 @@
         .light-mode ::-webkit-scrollbar-track { background: #f1f5f9; }
         .light-mode ::-webkit-scrollbar-thumb { background: #cbd5e1; }
         .light-mode ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+        /* Transition Delay Utilities */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+        .delay-500 { transition-delay: 500ms; }
     </style>
 </head>
 <body>
@@ -214,7 +221,7 @@
                     </a>
                 </div>
             </div>
-            <div class="relative reveal" style="transition-delay: 200ms;">
+            <div class="relative reveal delay-200">
                 <div class="glass rounded-3xl p-4 shadow-2xl border-white/10 relative z-10">
                     <div class="bg-gray-900/50 rounded-2xl overflow-hidden border border-white/5">
                         <div class="px-6 py-4 border-b border-white/5 flex items-center justify-between">
@@ -267,15 +274,15 @@
                 <div class="text-4xl lg:text-5xl font-display font-extrabold mb-2 text-gradient">500+</div>
                 <div class="text-muted font-medium">Businesses Served</div>
             </div>
-            <div class="text-center reveal" style="transition-delay: 100ms;">
+            <div class="text-center reveal delay-100">
                 <div class="text-4xl lg:text-5xl font-display font-extrabold mb-2 text-gradient">15+</div>
                 <div class="text-muted font-medium">Countries</div>
             </div>
-            <div class="text-center reveal" style="transition-delay: 200ms;">
+            <div class="text-center reveal delay-200">
                 <div class="text-4xl lg:text-5xl font-display font-extrabold mb-2 text-gradient">10M+</div>
                 <div class="text-muted font-medium">Messages Sent</div>
             </div>
-            <div class="text-center reveal" style="transition-delay: 300ms;">
+            <div class="text-center reveal delay-300">
                 <div class="text-4xl lg:text-5xl font-display font-extrabold mb-2 text-gradient">99.9%</div>
                 <div class="text-muted font-medium">Uptime</div>
             </div>
@@ -305,7 +312,7 @@
                 </div>
 
                 <!-- Daniel Amgad -->
-                <div class="glass rounded-3xl p-8 glass-hover reveal" style="transition-delay: 100ms;">
+                <div class="glass rounded-3xl p-8 glass-hover reveal delay-100">
                     <div class="relative w-24 h-24 mb-8 mx-auto">
                         <div class="absolute inset-0 bg-gradient-to-tr from-emerald-500 to-blue-400 rounded-2xl rotate-6 opacity-20"></div>
                         <div class="relative w-full h-full bg-gradient-to-tr from-emerald-500 to-blue-400 rounded-2xl flex items-center justify-center text-white font-display font-bold text-3xl shadow-xl">DA</div>
@@ -318,7 +325,7 @@
                 </div>
 
                 <!-- Farida Hussein -->
-                <div class="glass rounded-3xl p-8 glass-hover reveal" style="transition-delay: 200ms;">
+                <div class="glass rounded-3xl p-8 glass-hover reveal delay-200">
                     <div class="relative w-24 h-24 mb-8 mx-auto">
                         <div class="absolute inset-0 bg-gradient-to-tr from-blue-400 to-blue-600 rounded-2xl rotate-6 opacity-20"></div>
                         <div class="relative w-full h-full bg-gradient-to-tr from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center text-white font-display font-bold text-3xl shadow-xl">FH</div>
@@ -331,7 +338,7 @@
                 </div>
 
                 <!-- Martin Medhat -->
-                <div class="glass rounded-3xl p-8 glass-hover reveal" style="transition-delay: 300ms;">
+                <div class="glass rounded-3xl p-8 glass-hover reveal delay-300">
                     <div class="relative w-24 h-24 mb-8 mx-auto">
                         <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-500 rounded-2xl rotate-6 opacity-20"></div>
                         <div class="relative w-full h-full bg-gradient-to-tr from-blue-600 to-purple-500 rounded-2xl flex items-center justify-center text-white font-display font-bold text-3xl shadow-xl">MM</div>
@@ -344,7 +351,7 @@
                 </div>
 
                 <!-- Sohaib Djelani -->
-                <div class="glass rounded-3xl p-8 glass-hover reveal" style="transition-delay: 400ms;">
+                <div class="glass rounded-3xl p-8 glass-hover reveal delay-400">
                     <div class="relative w-24 h-24 mb-8 mx-auto">
                         <div class="absolute inset-0 bg-gradient-to-tr from-emerald-400 to-blue-500 rounded-2xl rotate-6 opacity-20"></div>
                         <div class="relative w-full h-full bg-gradient-to-tr from-emerald-400 to-blue-500 rounded-2xl flex items-center justify-center text-white font-display font-bold text-3xl shadow-xl">SD</div>
@@ -357,7 +364,7 @@
                 </div>
 
                 <!-- Judy Ahmed -->
-                <div class="glass rounded-3xl p-8 glass-hover reveal" style="transition-delay: 500ms;">
+                <div class="glass rounded-3xl p-8 glass-hover reveal delay-500">
                     <div class="relative w-24 h-24 mb-8 mx-auto">
                         <div class="absolute inset-0 bg-gradient-to-tr from-purple-500 to-blue-400 rounded-2xl rotate-6 opacity-20"></div>
                         <div class="relative w-full h-full bg-gradient-to-tr from-purple-500 to-blue-400 rounded-2xl flex items-center justify-center text-white font-display font-bold text-3xl shadow-xl">JA</div>
@@ -388,14 +395,14 @@
                     <h3 class="font-display font-bold text-2xl mb-4">Smart Automation</h3>
                     <p class="text-muted leading-relaxed">Build intelligent chatbots with our visual flow builder. Automate FAQs, order tracking, and support workflows without coding.</p>
                 </div>
-                <div class="glass rounded-3xl p-10 glass-hover reveal" style="transition-delay: 100ms;">
+                <div class="glass rounded-3xl p-10 glass-hover reveal delay-100">
                     <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-8">
                         <i data-lucide="inbox" class="text-emerald-500 w-8 h-8"></i>
                     </div>
                     <h3 class="font-display font-bold text-2xl mb-4">Team Inbox</h3>
                     <p class="text-muted leading-relaxed">Collaborative inbox for your entire team. Assign conversations, add notes, and deliver consistent support.</p>
                 </div>
-                <div class="glass rounded-3xl p-10 glass-hover reveal" style="transition-delay: 200ms;">
+                <div class="glass rounded-3xl p-10 glass-hover reveal delay-200">
                     <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-8">
                         <i data-lucide="layers" class="text-purple-500 w-8 h-8"></i>
                     </div>
@@ -432,7 +439,7 @@
                 </div>
 
                 <!-- Pro -->
-                <div class="glass rounded-3xl p-10 border-blue-500/50 relative reveal" style="transition-delay: 100ms;">
+                <div class="glass rounded-3xl p-10 border-blue-500/50 relative reveal delay-100">
                     <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">Most Popular</div>
                     <div class="text-blue-500 font-bold uppercase tracking-widest text-xs mb-4">Professional</div>
                     <div class="flex items-baseline gap-1 mb-6">
@@ -450,7 +457,7 @@
                 </div>
 
                 <!-- Enterprise -->
-                <div class="glass rounded-3xl p-10 reveal" style="transition-delay: 200ms;">
+                <div class="glass rounded-3xl p-10 reveal delay-200">
                     <div class="text-muted font-bold uppercase tracking-widest text-xs mb-4">Enterprise</div>
                     <div class="flex items-baseline gap-1 mb-6">
                         <span class="text-5xl font-display font-extrabold">Custom</span>
@@ -494,7 +501,7 @@
                     </div>
                 </div>
             </div>
-            <div class="glass rounded-[2rem] p-10 reveal" style="transition-delay: 200ms;">
+            <div class="glass rounded-[2rem] p-10 reveal delay-200">
                 <form id="contact-form" class="space-y-6">
                     <div class="grid sm:grid-cols-2 gap-6">
                         <div class="space-y-2">
